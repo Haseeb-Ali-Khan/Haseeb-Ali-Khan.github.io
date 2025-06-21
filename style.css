@@ -112,7 +112,7 @@ h3 { font-size: 1.5rem; }
     align-items: center;
     justify-content: space-between;
     padding-top: 80px; /* Header height */
-    background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), url('images/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.7));
 }
 
 #hero .hero-text {
