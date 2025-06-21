@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ['Unity', 'C#', 'XR', 'Accessibility'],
             description: 'This project introduces an innovative Augmented and Virtual Reality (AR/VR) based assistant designed to help individuals with color vision deficiency (CVD). Developed as part of the ICCTARVR project in collaboration with ETH Zürich, this solution focuses on enhancing accessibility in digital and real-world environments for CVD users.',
             media: [
-                { type: 'video', src: 'images/ColorBlindData/Color Blind Demo VR.mp4' },
                 { type: 'image', src: 'images/ColorBlindData/ColoBlind1.jpg' },
                 { type: 'image', src: 'images/ColorBlindData/ColoBlind2.jpg' },
                 { type: 'image', src: 'images/ColorBlindData/ColoBlind3.jpg' }
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ['Unity 3D', 'CNN', 'Python API', 'Emotion Detection'],
             description: 'The KoCo (Korea & Companion) application is a 3D desktop tool designed to bridge the cultural gap for foreigners residing in South Korea. It utilizes a Convolutional Neural Network (CNN) for real-time facial emotion recognition, helping users understand and respond to non-verbal cues in a Korean context.',
             media: [
-                { type: 'video', src: 'images/3DAppData/3D app video.mp4' },
                 { type: 'image', src: 'images/3DAppData/3DAppImg1.jpg' },
                 { type: 'image', src: 'images/3DAppData/3DAppImg2.jpg' },
                 { type: 'image', src: 'images/3DAppData/3DAppImg3.jpg' },
@@ -42,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ['Unity', 'AR', 'Vuforia', 'Mobile'],
             description: 'A prototype mobile application using Augmented Reality to simulate a fire emergency. The app\'s purpose is to augment a fire in the real world and then allow the user to extinguish it with a virtual fire extinguisher, providing a safe and interactive training experience.',
             media: [
-                { type: 'video', src: 'images/ARFireExtinguisherAppData/FireExtinguisher.mp4' },
                 { type: 'image', src: 'images/ARFireExtinguisherAppData/ARApp1.jpg' },
                 { type: 'image', src: 'images/ARFireExtinguisherAppData/ARApp2.jpg' },
                 { type: 'image', src: 'images/ARFireExtinguisherAppData/ARApp3.jpg' },
@@ -50,6 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         }
     };
+
+    // --- Burger Menu Logic ---
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    if (burgerMenu && navLinks) {
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    burgerMenu.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                }
+            });
+        });
+    }
 
     // --- Modal Logic ---
     const modal = document.getElementById('project-modal');
@@ -65,13 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (closeModalButton) {
-            closeModalButton.addEventListener('click', () => {
-                closeProjectModal();
-            });
+            closeModalButton.addEventListener('click', closeProjectModal);
         }
 
         window.addEventListener('click', (event) => {
-            if (event.target == modal) {
+            if (event.target === modal) {
                 closeProjectModal();
             }
         });
@@ -104,67 +120,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (data.media && data.media.length > 0) {
             data.media.forEach((mediaItem, index) => {
-                const firstImage = data.media.find(m => m.type === 'image');
-                const thumbSrc = mediaItem.type === 'video' ? (firstImage ? firstImage.src : 'images/gallery/event1.jpg') : mediaItem.src;
-                
                 const thumb = document.createElement('img');
-                thumb.src = thumbSrc;
+                thumb.src = mediaItem.src;
+                thumb.alt = `Thumbnail for ${data.title}`;
+                thumb.loading = 'lazy';
                 thumb.dataset.mediaSrc = mediaItem.src;
                 thumb.dataset.mediaType = mediaItem.type;
-                if (index === 0) thumb.classList.add('active');
+                if (index === 0) {
+                    thumb.classList.add('active');
+                }
                 
                 thumb.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('active')) return;
+                    if (e.currentTarget.classList.contains('active')) return;
+                    
                     navContainer.querySelectorAll('img').forEach(i => i.classList.remove('active'));
-                    e.target.classList.add('active');
-                    const newMediaSrc = e.target.dataset.mediaSrc;
-                    const newMediaType = e.target.dataset.mediaType;
+                    e.currentTarget.classList.add('active');
+
+                    const newMediaSrc = e.currentTarget.dataset.mediaSrc;
+                    const newMediaType = e.currentTarget.dataset.mediaType;
                     const newMediaElement = createMediaElement(newMediaType, newMediaSrc);
+                    
                     mainMediaContainer.innerHTML = '';
                     mainMediaContainer.appendChild(newMediaElement);
                 });
                 navContainer.appendChild(thumb);
             });
+            
             const initialMedia = createMediaElement(data.media[0].type, data.media[0].src);
             mainMediaContainer.appendChild(initialMedia);
+
             mediaContainer.appendChild(mainMediaContainer);
             mediaContainer.appendChild(navContainer);
         }
+        
         modal.style.display = 'flex';
+        document.body.classList.add('modal-open');
     }
 
     function closeProjectModal() {
         modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
     }
 
     function createMediaElement(type, src) {
-        if (type === 'video') {
-            const video = document.createElement('video');
-            video.src = src;
-            video.controls = true;
-            video.autoplay = true;
-            video.muted = true;
-            video.loop = true;
-            return video;
-        } else {
-            const img = document.createElement('img');
-            img.src = src;
-            return img;
-        }
+        const img = document.createElement('img');
+        img.src = src;
+        img.loading = 'lazy';
+        return img;
     }
 
     // --- General Animations ---
-    const header = document.querySelector('#main-header');
-    if(header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    }
-
     const fadeInObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -179,17 +184,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Modal fade-in effect
-const modalStyle = document.createElement('style');
-modalStyle.innerHTML = `
-.modal {
-    transition: background 0.4s cubic-bezier(.4,0,.2,1);
-}
-.modal-fade-in {
-    animation: modalFadeIn 0.4s;
-}
-@keyframes modalFadeIn {
-    from { background: rgba(35,36,58,0.0); }
-    to   { background: rgba(35,36,58,0.96); }
-}`;
-document.head.appendChild(modalStyle);
+// Added a style for no-scroll on body when mobile menu is open or modal is active
+const globalStyles = document.createElement('style');
+globalStyles.innerHTML = `
+    body.no-scroll, body.modal-open {
+        overflow: hidden;
+    }
+`;
+document.head.appendChild(globalStyles);

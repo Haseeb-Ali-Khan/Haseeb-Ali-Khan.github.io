@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haseeb Ali Khan | XR Researcher & AI Engineer</title>
-    <link rel="stylesheet" href="style.css?v=2.2">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2.3">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> </head>
 <body>
     <header id="main-header">
         <nav>
             <div class="logo">Haseeb Ali Khan.</div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills">Expertise</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
     </header>
     <main>
-        <!-- Hero Section -->
         <section id="hero" class="fade-in">
             <div class="hero-content">
                 <h1>XR Researcher & AI Engineer</h1>
@@ -28,10 +35,9 @@
                 <a href="#projects" class="cta-button">View My Work</a>
             </div>
             <div class="hero-image">
-                <img src="images/profile.jpg" alt="Haseeb Ali Khan">
+                <img src="images/profile.jpg" alt="Haseeb Ali Khan" loading="lazy">
             </div>
         </section>
-        <!-- Skills Section -->
         <section id="skills" class="fade-in">
             <h2 class="section-title">Research & Expertise</h2>
             <div class="skills-grid">
@@ -53,72 +59,68 @@
                 </div>
             </div>
         </section>
-        <!-- Projects Section -->
         <section id="projects" class="fade-in">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card" data-project="mr-assistant">
-                    <img src="images/ColorBlindData/ColoBlind1.jpg" alt="Color Blind Assistant">
+                    <img src="images/ColorBlindData/ColoBlind1.jpg" alt="Mixed Reality Color Blind Assistant" loading="lazy">
                     <div class="project-info">
                         <h3>Mixed Reality Color Blind Assistant</h3>
                         <p>An XR tool to aid users with color vision deficiency.</p>
-                        <button class="project-button">View Project</button>
+                        <button class="project-button">Learn More</button>
                     </div>
                 </div>
                 <div class="project-card" data-project="koco-app">
-                    <img src="images/3DAppData/3DAppImg1.jpg" alt="KoCo App">
+                    <img src="images/3DAppData/3DAppImg1.jpg" alt="KoCo App - Cultural Bridge" loading="lazy">
                     <div class="project-info">
                         <h3>KoCo App - Cultural Bridge</h3>
                         <p>A 3D desktop app with emotion detection for cultural integration.</p>
-                        <button class="project-button">View Project</button>
+                        <button class="project-button">Learn More</button>
                     </div>
                 </div>
                 <div class="project-card" data-project="vr-doctor">
-                    <img src="images/VirtualDoctorData/DrImg1.png" alt="Virtual Doctor">
+                    <img src="images/VirtualDoctorData/DrImg1.png" alt="Virtual Doctor Assistant" loading="lazy">
                     <div class="project-info">
                         <h3>Virtual Doctor Assistant</h3>
                         <p>A VR healthcare simulation for patient consultation.</p>
-                        <button class="project-button">View Project</button>
+                        <button class="project-button">Learn More</button>
                     </div>
                 </div>
                 <div class="project-card" data-project="ar-fire">
-                    <img src="images/ARFireExtinguisherAppData/ARApp1.jpg" alt="AR Fire Safety">
+                    <img src="images/ARFireExtinguisherAppData/ARApp1.jpg" alt="AR Fire Safety Prototype" loading="lazy">
                     <div class="project-info">
                         <h3>AR Fire Safety Prototype</h3>
                         <p>AR-based fire simulation and safety training app.</p>
-                        <button class="project-button">View Project</button>
+                        <button class="project-button">Learn More</button>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Gallery Section -->
         <section id="gallery" class="fade-in">
             <h2 class="section-title">Gallery & Appearances</h2>
             <p class="section-subtitle">Engaging with the community at conferences, exhibitions, and seminars.</p>
             <div class="gallery-grid">
-                <img src="images/gallery/event1.jpg" alt="Event 1">
-                <img src="images/gallery/event2.jpg" alt="Event 2">
-                <img src="images/gallery/event3.jpg" alt="Event 3">
-                <img src="images/gallery/event4.jpg" alt="Event 4">
+                <img src="images/gallery/event1.jpg" alt="Event 1" loading="lazy">
+                <img src="images/gallery/event2.jpg" alt="Event 2" loading="lazy">
+                <img src="images/gallery/event3.jpg" alt="Event 3" loading="lazy">
+                <img src="images/gallery/event4.jpg" alt="Event 4" loading="lazy">
             </div>
         </section>
-        <!-- Contact Section -->
         <section id="contact" class="fade-in">
             <h2 class="section-title">Let's Connect</h2>
             <p>I'm always open to discussing new research, collaborations, or opportunities in the XR and AI space.<br>Feel free to reach out!</p>
             <div class="contact-links">
-                <a href="mailto:haseebalikhan@example.com" class="contact-button">Email</a>
-                <a href="https://scholar.google.com" class="contact-button" target="_blank">Google Scholar</a>
-                <a href="https://github.com/Haseeb-Ali-Khan" class="contact-button" target="_blank">GitHub</a>
-                <a href="tel:+821012345678" class="contact-button">(+82) 10 1234 5678</a>
-                <a href="images/Haseeb Ali Khan's Resume.pdf" class="contact-button" target="_blank">View Resume</a>
+                <a href="mailto:haseebalikhan@example.com" class="contact-button"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://scholar.google.com" class="contact-button" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                <a href="https://github.com/Haseeb-Ali-Khan" class="contact-button" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <a href="tel:+821012345678" class="contact-button"><i class="fas fa-phone"></i> (+82) 10 1234 5678</a>
+                <a href="images/Haseeb Ali Khan's Resume.pdf" class="contact-button" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> View Resume</a>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Haseeb Ali Khan. All Rights Reserved.</p>
     </footer>
-    <!-- Project Modal -->
     <div id="project-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
@@ -129,11 +131,10 @@
                     <p id="modal-description"></p>
                 </div>
                 <div class="modal-media">
-                    <!-- Media will be injected here by script.js -->
-                </div>
+                    </div>
             </div>
         </div>
     </div>
-    <script src="script.js?v=2.2"></script>
-</body>
+    <script src="script.js?v=2.3"></script>
+    <script src="https://kit.fontawesome.com/cf4a800e2e.js" crossorigin="anonymous"></script> </body>
 </html>
