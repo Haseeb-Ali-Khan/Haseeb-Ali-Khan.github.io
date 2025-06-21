@@ -3,183 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haseeb Ali Khan - XR Researcher & AI Engineer</title>
-    <link rel="stylesheet" href="style.css?v=2.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Haseeb Ali Khan | XR Researcher & AI Engineer</title>
+    <link rel="stylesheet" href="style.css?v=2.2">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header id="main-header">
-        <div class="container">
-            <div class="logo">Haseeb Ali Khan<span>.</span></div>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <div class="logo">Haseeb Ali Khan.</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
     <main>
-        <section id="hero">
-            <div class="container" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-                <div class="hero-text">
-                    <h1>XR Researcher & AI Engineer</h1>
-                    <p>Bridging Reality and Intelligence through immersive experiences. MS in Software Engineering with a focus on Human-Computer Interaction and AI-driven XR applications.</p>
-                    <a href="#projects" class="cta-button">View My Work</a>
+        <!-- Hero Section -->
+        <section id="hero" class="fade-in">
+            <div class="hero-content">
+                <h1>XR Researcher & AI Engineer</h1>
+                <p>Bridging reality and intelligence through immersive experiences. MS in Software Engineering with a focus on Human-Computer Interaction and AI-driven XR applications.</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/profile.jpg" alt="Haseeb Ali Khan">
+            </div>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills" class="fade-in">
+            <h2 class="section-title">Research & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>XR Development</h3>
+                    <p>Unity, C#, Vuforia, AR/VR Hardware Integration</p>
                 </div>
-                <div class="hero-image">
-                    <img src="images/profile.jpg" alt="Haseeb Ali Khan">
+                <div class="skill-card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Python, TensorFlow, CNNs, Emotion Recognition</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Human-Computer Interaction</h3>
+                    <p>UX for Immersive Tech, Accessibility Design</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Web & APIs</h3>
+                    <p>HTML, CSS, JavaScript, RESTful APIs</p>
                 </div>
             </div>
         </section>
-
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">Research & Expertise</h2>
-                <div class="skills-grid">
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon">🔬</div>
-                        <h3>Mixed Reality Research</h3>
-                        <p>Enhancing XR accessibility for color-vision impaired users. Collaboration with ETH Zürich on ICCTARVR project with focus on Human-Computer Interaction.</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon">🧠</div>
-                        <h3>AI Integration</h3>
-                        <p>CNN-based facial emotion recognition, neural networks, and deep learning models integrated with Unity 3D applications for immersive experiences.</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon">🏥</div>
-                        <h3>Healthcare VR</h3>
-                        <p>Virtual Doctor assistant applications, medical training simulations, and patient interaction systems in virtual reality environments.</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon">🎨</div>
-                        <h3>Emotion & Style Transfer</h3>
-                        <p>Style transfer-based VR experiences for emotion induction, combining computer vision with immersive technologies for psychological research.</p>
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-project="mr-assistant">
+                    <img src="images/ColorBlindData/ColoBlind1.jpg" alt="Color Blind Assistant">
+                    <div class="project-info">
+                        <h3>Mixed Reality Color Blind Assistant</h3>
+                        <p>An XR tool to aid users with color vision deficiency.</p>
+                        <button class="project-button">View Project</button>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="images/project-mr.jpg" alt="Mixed Reality Color Blind Assistant">
-                        </div>
-                        <div class="project-content">
-                            <h3>Mixed Reality Color Blind Assistant</h3>
-                            <p class="project-description">An AR/VR accessibility solution for color-vision impaired users, developed in collaboration with ETH Zürich.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Unity</span>
-                                <span class="tech-tag">Multi Player</span>
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">Accessibility</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="javascript:void(0)" class="project-link accordion-toggle">View Details &darr;</a>
-                            </div>
-                        </div>
-                        <div class="accordion-content">
-                            <h4>Project Overview</h4>
-                            <p>This project introduces an innovative Augmented and Virtual Reality (AR/VR) based assistant designed to help individuals with color vision deficiency (CVD). Developed as part of the ICCTARVR project in collaboration with ETH Zürich, this solution focuses on enhancing accessibility in digital and real-world environments for CVD users.</p>
-                            <h4>Key Features</h4>
-                            <ul>
-                                <li>Real-time color transformation for deuteranopia, protanopia, and tritanopia.</li>
-                                <li>Multi-user collaboration mode for guided assistance.</li>
-                                <li>Integration with Unity for cross-platform AR/VR deployment.</li>
-                            </ul>
-                        </div>
+                <div class="project-card" data-project="koco-app">
+                    <img src="images/3DAppData/3DAppImg1.jpg" alt="KoCo App">
+                    <div class="project-info">
+                        <h3>KoCo App - Cultural Bridge</h3>
+                        <p>A 3D desktop app with emotion detection for cultural integration.</p>
+                        <button class="project-button">View Project</button>
                     </div>
-
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="images/project-koco.jpg" alt="KoCo App Interface">
-                        </div>
-                        <div class="project-content">
-                            <h3>KoCo App - Cultural Bridge</h3>
-                            <p class="project-description">A 3D desktop app with CNN-based facial emotion recognition for foreigners in Korea, aiding cultural adaptation.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Unity 3D</span>
-                                <span class="tech-tag">CNN</span>
-                                <span class="tech-tag">Python API</span>
-                                <span class="tech-tag">Emotion Detection</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="javascript:void(0)" class="project-link accordion-toggle">View Details &darr;</a>
-                            </div>
-                        </div>
-                        <div class="accordion-content">
-                             <h4>Project Overview</h4>
-                            <p>The KoCo (Korea & Companion) application is a 3D desktop tool designed to bridge the cultural gap for foreigners residing in South Korea. It utilizes a Convolutional Neural Network (CNN) for real-time facial emotion recognition, helping users understand and respond to non-verbal cues in a Korean context.</p>
-                            <h4>Key Features</h4>
-                            <ul>
-                                <li>CNN-based facial emotion recognition via Python API.</li>
-                                <li>Interactive 3D scenarios for cultural learning.</li>
-                                <li>Aims to reduce cultural misunderstandings and improve social integration.</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="project-card" data-project="vr-doctor">
+                    <img src="images/VirtualDoctorData/DrImg1.png" alt="Virtual Doctor">
+                    <div class="project-info">
+                        <h3>Virtual Doctor Assistant</h3>
+                        <p>A VR healthcare simulation for patient consultation.</p>
+                        <button class="project-button">View Project</button>
                     </div>
-
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="images/project-vr-doctor.jpg" alt="Virtual Doctor VR">
-                        </div>
-                        <div class="project-content">
-                            <h3>Virtual Doctor Assistant</h3>
-                            <p class="project-description">A VR healthcare application for medical consultation and guidance, presented at World IT Show Coex 2024.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Unity VR</span>
-                                <span class="tech-tag">Emotion Detection</span>
-                                <span class="tech-tag">Healthcare</span>
-                                <span class="tech-tag">Emotion Induction</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="javascript:void(0)" class="project-link accordion-toggle">View Details &darr;</a>
-                            </div>
-                        </div>
-                        <div class="accordion-content">
-                            <h4>Project Overview</h4>
-                            <p>Presented at the World IT Show Coex 2024, the Virtual Doctor Assistant is a proof-of-concept VR application for healthcare. It provides a safe and immersive environment for patients to interact with a virtual medical professional for consultations, training, and therapy.</p>
-                            <h4>Key Features</h4>
-                            <ul>
-                                <li>Realistic virtual environment for patient-doctor interaction.</li>
-                                <li>Incorporates emotion detection to gauge patient comfort and response.</li>
-                                <li>Designed for applications in medical training, patient education, and tele-health.</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="project-card" data-project="ar-fire">
+                    <img src="images/ARFireExtinguisherAppData/ARApp1.jpg" alt="AR Fire Safety">
+                    <div class="project-info">
+                        <h3>AR Fire Safety Prototype</h3>
+                        <p>AR-based fire simulation and safety training app.</p>
+                        <button class="project-button">View Project</button>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <p>I'm always open to discussing new research, collaborations, or opportunities in the XR and AI space. <br>Feel free to reach out!</p>
-                <div class="contact-links">
-                    <a href="mailto:haseebali5278@gmail.com" class="contact-link">📧 Email</a>
-                    <a href="https://scholar.google.com/citations?user=SQFVUEwAAAAJ&hl=en" class="contact-link" target="_blank">🎓 Google Scholar</a>
-                    <a href="https://github.com/Haseeb-Ali-Khan" class="contact-link" target="_blank">💻 GitHub</a>
-                    <a href="tel:+821023529803" class="contact-link">📱 (+82) 10 2352 9803</a>
-                </div>
+        <!-- Gallery Section -->
+        <section id="gallery" class="fade-in">
+            <h2 class="section-title">Gallery & Appearances</h2>
+            <p class="section-subtitle">Engaging with the community at conferences, exhibitions, and seminars.</p>
+            <div class="gallery-grid">
+                <img src="images/gallery/event1.jpg" alt="Event 1">
+                <img src="images/gallery/event2.jpg" alt="Event 2">
+                <img src="images/gallery/event3.jpg" alt="Event 3">
+                <img src="images/gallery/event4.jpg" alt="Event 4">
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>I'm always open to discussing new research, collaborations, or opportunities in the XR and AI space.<br>Feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:haseebalikhan@example.com" class="contact-button">Email</a>
+                <a href="https://scholar.google.com" class="contact-button" target="_blank">Google Scholar</a>
+                <a href="https://github.com/Haseeb-Ali-Khan" class="contact-button" target="_blank">GitHub</a>
+                <a href="tel:+821012345678" class="contact-button">(+82) 10 1234 5678</a>
+                <a href="images/Haseeb Ali Khan's Resume.pdf" class="contact-button" target="_blank">View Resume</a>
             </div>
         </section>
     </main>
-
-    <footer id="main-footer">
-        <div class="container">
-            <p>&copy; 2025 Haseeb Ali Khan. All Rights Reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 Haseeb Ali Khan. All Rights Reserved.</p>
     </footer>
-
-    <script src="script.js?v=2.0"></script>
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <div class="modal-text">
+                    <h2 id="modal-title"></h2>
+                    <div id="modal-tech" class="tech-tags"></div>
+                    <p id="modal-description"></p>
+                </div>
+                <div class="modal-media">
+                    <!-- Media will be injected here by script.js -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js?v=2.2"></script>
 </body>
 </html>
