@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2.3">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> </head>
+    <link rel="stylesheet" href="project-style.css?v=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
 <body>
     <header id="main-header">
         <nav>
@@ -62,48 +64,48 @@
         <section id="projects" class="fade-in">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card" data-project="mr-assistant">
+                <a href="project-mr-assistant.html" class="project-card">
                     <img src="images/ColorBlindData/ColoBlind1.jpg" alt="Mixed Reality Color Blind Assistant" loading="lazy">
                     <div class="project-info">
                         <h3>Mixed Reality Color Blind Assistant</h3>
                         <p>An XR tool to aid users with color vision deficiency.</p>
-                        <button class="project-button">Learn More</button>
+                        <span class="project-button">Learn More</span>
                     </div>
-                </div>
-                <div class="project-card" data-project="koco-app">
+                </a>
+                <a href="project-koco-app.html" class="project-card">
                     <img src="images/3DAppData/3DAppImg1.jpg" alt="KoCo App - Cultural Bridge" loading="lazy">
                     <div class="project-info">
                         <h3>KoCo App - Cultural Bridge</h3>
                         <p>A 3D desktop app with emotion detection for cultural integration.</p>
-                        <button class="project-button">Learn More</button>
+                        <span class="project-button">Learn More</span>
                     </div>
-                </div>
-                <div class="project-card" data-project="vr-doctor">
+                </a>
+                <a href="project-vr-doctor.html" class="project-card">
                     <img src="images/VirtualDoctorData/DrImg1.png" alt="Virtual Doctor Assistant" loading="lazy">
                     <div class="project-info">
                         <h3>Virtual Doctor Assistant</h3>
                         <p>A VR healthcare simulation for patient consultation.</p>
-                        <button class="project-button">Learn More</button>
+                        <span class="project-button">Learn More</span>
                     </div>
-                </div>
-                <div class="project-card" data-project="ar-fire">
+                </a>
+                <a href="project-ar-fire.html" class="project-card">
                     <img src="images/ARFireExtinguisherAppData/ARApp1.jpg" alt="AR Fire Safety Prototype" loading="lazy">
                     <div class="project-info">
                         <h3>AR Fire Safety Prototype</h3>
                         <p>AR-based fire simulation and safety training app.</p>
-                        <button class="project-button">Learn More</button>
+                        <span class="project-button">Learn More</span>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
         <section id="gallery" class="fade-in">
             <h2 class="section-title">Gallery & Appearances</h2>
             <p class="section-subtitle">Engaging with the community at conferences, exhibitions, and seminars.</p>
             <div class="gallery-grid">
-                <img src="images/gallery/event1.jpg" alt="Event 1" loading="lazy">
-                <img src="images/gallery/event2.jpg" alt="Event 2" loading="lazy">
-                <img src="images/gallery/event3.jpg" alt="Event 3" loading="lazy">
-                <img src="images/gallery/event4.jpg" alt="Event 4" loading="lazy">
+                <img src="images/gallery/event1.jpg" alt="Event 1" loading="lazy" class="gallery-item">
+                <img src="images/gallery/event2.jpg" alt="Event 2" loading="lazy" class="gallery-item">
+                <img src="images/gallery/event3.jpg" alt="Event 3" loading="lazy" class="gallery-item">
+                <img src="images/gallery/event4.jpg" alt="Event 4" loading="lazy" class="gallery-item">
             </div>
         </section>
         <section id="contact" class="fade-in">
@@ -121,20 +123,13 @@
     <footer>
         <p>&copy; 2024 Haseeb Ali Khan. All Rights Reserved.</p>
     </footer>
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <div class="modal-body">
-                <div class="modal-text">
-                    <h2 id="modal-title"></h2>
-                    <div id="modal-tech" class="tech-tags"></div>
-                    <p id="modal-description"></p>
-                </div>
-                <div class="modal-media">
-                    </div>
-            </div>
-        </div>
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+        <img class="lightbox-content" id="lightbox-img">
     </div>
     <script src="script.js?v=2.3"></script>
-    <script src="https://kit.fontawesome.com/cf4a800e2e.js" crossorigin="anonymous"></script> </body>
+    <script src="https://kit.fontawesome.com/cf4a800e2e.js" crossorigin="anonymous"></script>
+</body>
 </html>

@@ -1,0 +1,146 @@
+.project-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+}
+
+.project-hero h1 {
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.project-tags .tech-tag {
+    background: var(--gradient-end);
+    color: #fff;
+    border-radius: 15px;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.project-content h2 {
+    font-size: 2rem;
+    color: var(--accent-color-1);
+    margin-bottom: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gradient-end);
+    display: inline-block;
+}
+
+.project-description {
+    margin-bottom: 4rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.project-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-gallery-grid .gallery-item {
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.project-gallery-grid .gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+}
+
+/* Lightbox styles (shared with main page) */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    animation: zoomIn 0.3s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+    color: var(--accent-color-1);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1rem;
+    margin-top: -3rem;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.lightbox-next {
+    right: 1rem;
+    border-radius: 5px 0 0 5px;
+}
+
+.lightbox-prev {
+    left: 1rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .project-hero h1 {
+        font-size: 2.2rem;
+    }
+    .project-content h2 {
+        font-size: 1.8rem;
+    }
+} 
