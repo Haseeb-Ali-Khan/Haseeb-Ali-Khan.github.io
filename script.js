@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 thumb.alt = `Thumbnail for ${data.title}`;
                 thumb.loading = 'lazy';
                 thumb.dataset.mediaSrc = mediaItem.src;
-                thumb.dataset.mediaType = mediaItem.type;
                 if (index === 0) {
                     thumb.classList.add('active');
                 }
@@ -137,8 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.currentTarget.classList.add('active');
 
                     const newMediaSrc = e.currentTarget.dataset.mediaSrc;
-                    const newMediaType = e.currentTarget.dataset.mediaType;
-                    const newMediaElement = createMediaElement(newMediaType, newMediaSrc);
+                    const newMediaElement = createMediaElement(newMediaSrc);
                     
                     mainMediaContainer.innerHTML = '';
                     mainMediaContainer.appendChild(newMediaElement);
@@ -146,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 navContainer.appendChild(thumb);
             });
             
-            const initialMedia = createMediaElement(data.media[0].type, data.media[0].src);
+            const initialMedia = createMediaElement(data.media[0].src);
             mainMediaContainer.appendChild(initialMedia);
 
             mediaContainer.appendChild(mainMediaContainer);
@@ -162,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('modal-open');
     }
 
-    function createMediaElement(type, src) {
+    function createMediaElement(src) {
         const img = document.createElement('img');
         img.src = src;
         img.loading = 'lazy';
