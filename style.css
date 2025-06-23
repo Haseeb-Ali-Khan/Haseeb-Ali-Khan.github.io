@@ -176,10 +176,34 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0 12px 30px rgba(0,0,0,0.5);
     transform: translateY(-3px) scale(1.02);
 }
+
+.cta-buttoncv {
+    background: var(--card-bg);
+    color: var(--accent-color-1);
+    border: 2px solid var(--accent-color-1);
+    border-radius: 25px;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.10rem;
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: inline-block;
+    letter-spacing: 0.5px;
+    align-items: center;
+    gap: 0.6rem;
+}
+.cta-buttoncv:hover {
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    border: 2px solid var(--gradient-end);
+    transform: translateY(-3px);
+}
+
 .hero-image {
     flex-shrink: 0;
     display: flex;
-    align-items: center;
+    align-items: centter;
     justify-content: center;
     animation: slideInRight 1s ease-out;
 }
@@ -777,5 +801,19 @@ footer {
     .modal-media-nav img {
         width: 45px;
         height: 45px;
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: stretch;
     }
 }
