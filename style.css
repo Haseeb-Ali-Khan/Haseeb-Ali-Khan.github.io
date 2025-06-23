@@ -732,11 +732,11 @@ footer {
         top: 70px; /* Adjust for smaller header */
     }
     #hero {
-        padding: 2.5rem 1rem;
+        padding: 1.2rem 0.5rem;
     }
     .hero-image img {
-        width: 120px;
-        height: 120px;
+        width: 170px;
+        height: 170px;
         border-width: 4px;
     }
     .section-title {
