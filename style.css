@@ -134,10 +134,10 @@ body::-webkit-scrollbar-thumb {
     flex-direction: row; /* Default desktop layout */
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 5rem;
     min-height: calc(100vh - 80px); /* Adjust based on header height */
     padding: 4rem 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: left;
 }
@@ -203,18 +203,24 @@ body::-webkit-scrollbar-thumb {
 .hero-image {
     flex-shrink: 0;
     display: flex;
-    align-items: centter;
+    align-items: center;
     justify-content: center;
+    min-width: 280px;
+    min-height: 280px;
     animation: slideInRight 1s ease-out;
 }
 .hero-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 6px solid var(--accent-color-1);
-    box-shadow: 0 0 0 15px rgba(var(--accent-color-1-rgb), 0.1); /* Use RGB for rgba */
+    width: 280px;
+    height: 280px;
     object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 8px solid var(--accent-color-1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
     background: var(--card-bg);
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 
 /* Utility Classes */
@@ -598,14 +604,14 @@ footer {
 /* Responsive Design */
 @media (max-width: 1024px) {
     #hero {
+        max-width: 98vw;
         gap: 2rem;
         padding: 3rem 1.5rem;
     }
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-    .hero-content p {
-        font-size: 1.15rem;
+    .hero-image img {
+        width: 180px;
+        height: 180px;
+        border-width: 6px;
     }
     .section-title {
         font-size: 2.4rem;
@@ -675,8 +681,8 @@ footer {
         padding: 3rem 1.5rem;
     }
     .hero-image img {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
     .hero-content h1 {
         font-size: 2.5rem;
@@ -728,21 +734,10 @@ footer {
     #hero {
         padding: 2.5rem 1rem;
     }
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-    .hero-content p {
-        font-size: 1rem;
-    }
-    .cta-button {
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
-    }
     .hero-image img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
         border-width: 4px;
-        box-shadow: 0 0 0 10px rgba(var(--accent-color-1-rgb), 0.1);
     }
     .section-title {
         font-size: 2rem;
